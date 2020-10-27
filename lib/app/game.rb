@@ -94,7 +94,7 @@ private
   end
 
   def selected_case
-    puts "It's #{current_player.name}'s' turn to play !"
+    puts "It's #{current_player.name}\'s turn to play !"
     puts "Choose a boardcase (ex: A1, B2...)"
     print ">"
     selected_case = boardcase_selection
@@ -108,7 +108,7 @@ private
   def boardcase_selection
     choice = gets.chomp
     until valid_boardcase_input?(choice)
-      puts "Invalid input, chose another boardcase (ex: A1, B2...)"
+      puts "Invalid input, choose another boardcase (ex: A1, B2...)"
       choice = gets.chomp
     end
     @board.boardcases.find { |boardcase| boardcase.name == choice }
