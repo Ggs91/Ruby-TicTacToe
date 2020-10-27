@@ -77,37 +77,17 @@ This help to know the choronologic order of the program, where we need condition
 
 **3. Dividing the work in small pieces**
 
-I made a function that generate an array of cases names depending on the desired gridsize.
-For exemple for a regular 3x3 grid size it will return ["a1", "a2", "a3", ... , "c1", "c2", "c3"].
-```
-// src/lib/board.js
+Using the plan I did previously, I divided each point into sub problems and tried to work with an agile methodoloy, meaning resolving enitrely a sub-problem and getting it to work before moving on the next one. 
 
-function _generateBoardCasesIDsArray(gridSize) {
-  const arrayOfCases = [];
-  const gridColumnID = Array.from({ length: gridSize }, (_, i) =>
-    String.fromCharCode("a".charCodeAt(0) + i)
-  ); // ["a", "b", "c"...]
-  const gridRowsID = [...Array(gridSize + 1).keys()].slice(1); // ["1", "2", "3"...]
+For the classes I took each class and coded as far as possible what I pictured of it: attr_accessor, initialize method, instance variables and methods.
+Then later on if functionalities were requiered I went back to the class and added it. 
 
-  gridColumnID.forEach((columnID) => {
-    gridRowsID.forEach((rowID) => {
-      arrayOfCases.push(columnID + rowID);
-    });
-  });
+For the game loop I chosed to do it in chronologic order: 
+-Writing the code that will print a welcome message to the console.
+-Then the function that asks for players inputs. 
+-But I figuered this should go along with player initilization, so I added the logic of players initilization in the function
+-...
 
-  return arrayOfCases; // ["a1", "a2", "a3", "b1"...]
-}
-```
-This can then be used by another method that will iterate over it and create the `BoardCase`s assigning each case an id of this array.
-```
-// src/lib/board.js
-
-const boardCases = (function (gridSize) {
-  // Instanciation of the boardcases. "boardCases" variable is assigned the return of the IIFE invokation
-  const boardCasesIDs = _generateBoardCasesIDsArray(gridSize);
-  return boardCasesIDs.map((caseID) => BoardCase(caseID, doc));
-})(3); // Here we select a 3x3 grid size
-```
 ### To be improved:
 1. Exctracting DOM manipulations into it's own module separated from the logic. Currently this is not respecting the single responsability principle.
 
