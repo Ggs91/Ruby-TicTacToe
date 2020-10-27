@@ -14,13 +14,13 @@ Part of the curriculum of [The Hacking Project](https://www.thehackingproject.or
 
 ### Problem solving approach for building the app
 
-* Understanding the problem.
+* Understanding the problem
 
-* Planning.
+* Planning
 
-* Dividing the work.
+* Dividing the work
 
-**1. Object Oriented app conception**
+**1. Understanding the problem**
 
 Explaining with words what the program does, this ensure that the problem is clearly understood.
 
