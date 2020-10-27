@@ -83,9 +83,13 @@ For the classes I took each class and coded as far as possible what I pictured o
 Then later on if functionalities were requiered I went back to the class and added it. 
 
 For the game loop I chosed to do it in chronologic order: 
+
 -Writing the code that will print a welcome message to the console.
+
 -Then the function that asks for players inputs. 
+
 -But I figuered this should go along with player initilization, so I added the logic of players initilization in the function
+
 -...
 
 ### To be improved:
