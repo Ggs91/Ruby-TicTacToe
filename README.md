@@ -22,10 +22,9 @@ Part of the curriculum of [The Hacking Project](https://www.thehackingproject.or
 
 **1. Object Oriented app conception**
 
-Explaining with words what the program does.
+Explaining with words what the program does, this ensure that the problem is clearly understood.
 
 ```
-This ensure that the problem is clearly understood.
 The program is a game played by 2 players on a board that is a 3x3 grid.
 The players play turn by turn by writting a pawn on a boardcase.
 The first one that does a vertical, horizontal or diagonal combination with his pawns win the game.
