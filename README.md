@@ -97,9 +97,9 @@ I chosed to do it in chronologic order:
 -...
 
 ### To be improved:
-1. Exctracting DOM manipulations into it's own module separated from the logic. Currently this is not respecting the single responsability principle.
+1. Better UI
 
-2. Decoupling. Currently objects are tightly coupled. For exemple, to be created, a `Board` need to know about `BoardCase`s. And `Game` depend on `Player` and `Board`. Fixing this is possible using a Pub/Sub pattern.
+2. Commenting the code
 
 ## Installation
 
