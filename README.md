@@ -34,13 +34,48 @@ At the end of a round, the program asks what to do next. Ending the game or play
 
 **2. Planning**
 
-**3. Using webpack:**
+#### What can be modelized
 
-This is my first project using webpack. After a lot of research and few headaches to configure it, I've managed to set it properly. I've a splited the configuration into 3 files, added babel, a linter and css autoprefixer. It's worth the time spent to learn it considering the huge benefits that it brings to the workflow.  
+What "real world" objects needs to be modelized => to define the classes
+``` 
+Player, Board, Boardcase, Game & Application
+```
+* What are the caracteristics of each object type and what actions an object can perform => to define methods and attributes
 
-### Pieces I'm proud of:
+For exemple for the Player Class
 
-**1. Algorithm that generate a grid of the desired size**
+``` 
+Players attributes: @name, @turn_to_play, @pawn_shape, @points.
+Player methods: #make_a_move 
+```
+
+* Which objects need to be composed together
+
+``` 
+A Board object need to be composed with Boardcase's objects 
+```
+#### Describing in pseudo-code
+
+How the program will work step by step as accurately as possible. 
+This help to know the choronologic order of the program, where we need condition checks and the pieces that will be parts of loops.
+
+```
+1 - Prints welcome message
+2 - Ask for player 1 infos
+3 - While incorrect user input ask again, if correct initialize player 1 object 
+4 - Repeat the same step for player 2 
+5 – Initialize a round counter
+6 - prints the board
+6 - Check player turn to play
+8 - print him to play 
+9 - While user input incorrect: ask again, if correct make player play 
+10 - while player play on an unavailable boardcase ask to play another one
+11 - Check if an endgame condition is reached (win combination or board is full)
+12 – Print results 
+13 – Ask what to do next: End the game or play another round
+```
+
+**3. Dividing the work in small pieces**
 
 I made a function that generate an array of cases names depending on the desired gridsize.
 For exemple for a regular 3x3 grid size it will return ["a1", "a2", "a3", ... , "c1", "c2", "c3"].
