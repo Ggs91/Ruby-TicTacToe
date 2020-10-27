@@ -4,9 +4,7 @@ Part of the curriculum of [The Hacking Project](https://www.thehackingproject.or
 
 ## Learning outcomes
 
-### Implementations:
-
-**1. Object Oriented app conception**
+### Object Oriented app conception:
 
 * Using classes to blueprint objects. Objects have states (instance variables) and behaviors (methods).
 
@@ -14,20 +12,25 @@ Part of the curriculum of [The Hacking Project](https://www.thehackingproject.or
 
 * Composition. Objects are nested in other objects to carry more information in a more structured manner.
 
-**2. Problem solving approach for building the app **
+### Problem solving approach for building the app
 
-* Methods with multiple responsabilities are splited into small methods. This gives a cleaner and more maintainable code.
-For exemple, here is the code of `initializeGame()` that takes care of initializing the players, closing an overlay div in the HTML, and starting a round:
-```
-// src/lib/game.js
+* Understanding the problem.
 
-function initializeGame() {
-  _initializePlayers();
-  _closeOverlay();
-  startRound();
-}
+* Planning.
+
+* Dividing the work.
+
+**1. Object Oriented app conception**
+
+Explaining with words what the program does.
+
 ```
-* Files architecture: 1 module per file, using ES6 modules.
+This ensure that the problem is clearly understood.
+The program is a game played by 2 players on a board that is a 3x3 grid. The players play turn by turn by writting a pawn on a boardcase. The first one that does a vertical, horizontal or diagonal combination with his pawns win the game. If no one does and the board is full, it's tie.
+At the end of a round, the program asks what to do next. Ending the game or playing another round.
+```
+
+**2. Planning**
 
 **3. Using webpack:**
 
