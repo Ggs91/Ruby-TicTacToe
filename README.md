@@ -1,20 +1,20 @@
 # Tic Tac Toe game in Ruby
-Ui in the terminal.
+Terminal UI.
 Part of the curriculum of [The Hacking Project](https://www.thehackingproject.org/) bootcamp.
 
 ## Learning outcomes
 
 ### Implementations:
 
-**1. Encapsulation**
+**1. Object Oriented app conception**
 
-* No code in the globale scope. Factory functions and module patterns are namespaced in modules.
+* Using classes to blueprint objects. Objects have states (instance variables) and behaviors (methods).
 
-* Dependencies are injected in parametres.
+* Encapsulaions: No code in the global scope. Objects interact through their APIs that are public methods only.
 
-* Objects created are closures. Their interaction with other objects is only possible through APIs (public methods and properties), the rest of their methods are strictly private. This allow real data protection, as opposed to just using convention like appending an underscore at the begining of a variable.
+* Composition. Objects are nested in other objects to carry more information in a more structured manner.
 
-**2. Separations of concerns:**
+**2. Problem solving approach for building the app **
 
 * Methods with multiple responsabilities are splited into small methods. This gives a cleaner and more maintainable code.
 For exemple, here is the code of `initializeGame()` that takes care of initializing the players, closing an overlay div in the HTML, and starting a round:
