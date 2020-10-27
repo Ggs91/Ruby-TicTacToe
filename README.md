@@ -26,8 +26,8 @@ Explaining with words what the program does, this ensure that the problem is cle
 
 ```
 The program is a game played by 2 players on a board that is a 3x3 grid.
-The players play turn by turn by writting a pawn on a boardcase.
-The first one that does a vertical, horizontal or diagonal combination with his pawns win the game.
+The players play turn by turn by writing a pawn on a boardcase.
+The first one that does a vertical, horizontal or diagonal combination with his pawns wins the game.
 If no one does and the board is full, it's tie.
 At the end of a round, the program asks what to do next. Ending the game or playing another round.
 ```
