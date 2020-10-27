@@ -79,10 +79,14 @@ This help to know the choronologic order of the program, where we need condition
 
 Using the plan I did previously, I divided each point into sub problems and tried to work with an agile methodoloy, meaning resolving enitrely a sub-problem and getting it to work before moving on the next one. 
 
-For the classes I took each class and coded as far as possible what I pictured of it: attr_accessor, initialize method, instance variables and methods.
+#### For the classes 
+
+I took each class and coded as far as possible what I pictured of it: attr_accessor, initialize method, instance variables and methods.
 Then later on if functionalities were requiered I went back to the class and added it. 
 
-For the game loop I chosed to do it in chronologic order: 
+#### For the game loop
+
+I chosed to do it in chronologic order: 
 
 -Writing the code that will print a welcome message to the console.
 
