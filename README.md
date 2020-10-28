@@ -52,7 +52,7 @@ Player methods: #make_a_move
 * Which objects need to be composed together
 
 ``` 
-A Board object need to be composed with Boardcase's objects 
+A Board object need to be composed with Boardcases objects 
 ```
 #### Describing in pseudo-code
 
