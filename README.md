@@ -69,7 +69,7 @@ This help to know the choronologic order of the program, where we need condition
 6 - Check player turn to play
 8 - print him to play 
 9 - While user input incorrect: ask again, if correct make player play 
-10 - while player play on an unavailable boardcase ask to play another one
+10 - while player play an unavailable boardcase ask to play another one
 11 - Check if an endgame condition is reached (win combination or board is full)
 12 – Print results 
 13 – Ask what to do next: End the game or play another round
