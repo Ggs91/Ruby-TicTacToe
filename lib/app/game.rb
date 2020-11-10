@@ -11,13 +11,17 @@ class Game
   end
 
   def welcome_message(round)
-    puts "Welcome to Tic Tac Toe !"
+    puts 'Welcome to Tic Tac Toe !'
     puts "ROUND #{round} !"
   end
 
   def initializing_players
     2.times do
-      @players.empty? ? initialize_player_number(1) : initialize_player_number(2)
+      if @players.empty?
+        initialize_player_number(1)
+      else
+        initialize_player_number(2)
+      end
     end
   end
 
@@ -30,9 +34,7 @@ class Game
   end
 
   def switch_turn_to_play
-    @players.each do |player|
-      player.turn == true ? player.turn = false : player.turn = true
-    end
+    @players.each { |player| player.turn = (!(player.turn == true)) }
   end
 
   def results
@@ -47,22 +49,26 @@ class Game
   end
 
   def display_scores
-    puts "Scores:"
+    puts 'Scores:'
     @players.each { |player| puts "#{player.name} : #{player.points} points" }
   end
 
   def ending
     puts "\n\nPlay another round ? y/n ?"
-    print ">"
+    print '>'
     choice = gets.chomp
-    exit if choice == "n"
+    exit if choice == 'n'
     @board = Board.new
   end
 
-private
+  private
 
   def take_the_other_pawn_shape
-    @players.any? { |player| player.pawn_shape == "X" } ? (return "O") : (return "X")
+    if @players.any? { |player| player.pawn_shape == 'X' }
+      (return 'O')
+    else
+      (return 'X')
+    end
   end
 
   def initialize_player_number(player_position)
@@ -86,7 +92,7 @@ private
   end
 
   def unvalid_pawn_shape?(pawn_shape)
-    pawn_shape != "X" && pawn_shape != "O"
+    pawn_shape != 'X' && pawn_shape != 'O'
   end
 
   def current_player
@@ -94,28 +100,27 @@ private
   end
 
   def selected_case
-    puts "It's #{current_player.name}\'s turn to play !"
-    puts "Choose a boardcase (ex: A1, B2...)"
-    print ">"
+    puts "It's #{current_player.name}'s turn to play !"
+    puts 'Choose a boardcase (ex: A1, B2...)'
+    print '>'
     selected_case = boardcase_selection
     until selected_case.is_available?
-      puts "This boardcase is already taken, choose another one (ex: A1, B2...)"
+      puts 'This boardcase is already taken, choose another one (ex: A1, B2...)'
       selected_case = boardcase_selection
     end
-    return selected_case
+    selected_case
   end
 
   def boardcase_selection
     choice = gets.chomp
     until valid_boardcase_input?(choice)
-      puts "Invalid input, choose another boardcase (ex: A1, B2...)"
+      puts 'Invalid input, choose another boardcase (ex: A1, B2...)'
       choice = gets.chomp
     end
     @board.boardcases.find { |boardcase| boardcase.name == choice }
   end
 
   def valid_boardcase_input?(input)
-     @board.boardcases.any? { |boardcase| boardcase.name == input }
+    @board.boardcases.any? { |boardcase| boardcase.name == input }
   end
-
 end

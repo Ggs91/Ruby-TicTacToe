@@ -11,5 +11,4 @@ class Player
   def make_a_move(selected_case)
     selected_case.content = pawn_shape
   end
-
 end

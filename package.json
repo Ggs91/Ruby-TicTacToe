@@ -1,0 +1,28 @@
+{
+  "name": "Ruby-TicTacToe",
+  "version": "1.0.0",
+  "description": "Terminal UI. Part of the curriculum of [The Hacking Project](https://www.thehackingproject.org/) bootcamp.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@prettier/plugin-ruby": "^0.20.1",
+    "prettier": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ggs91/Ruby-TicTacToe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ggs91/Ruby-TicTacToe/issues"
+  },
+  "homepage": "https://github.com/Ggs91/Ruby-TicTacToe#readme"
+}
