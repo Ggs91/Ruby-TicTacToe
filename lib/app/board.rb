@@ -28,12 +28,14 @@ class Board
   end
 
   def display
-    puts "  1 2 3 \nA #{@a1.content}|#{@a2.content}|#{@a3.content}\nB #{
-           @b1.content
-         }|#{@b2.content}|#{@b3.content}\nC #{@c1.content}|#{@c2.content}|#{
-           @c3.content
-         }\n\n"
+    row1 = row_starter(" ") + "1 2 3"
+    row2 = row_starter("A") + "#{@a1.content}|#{@a2.content}|#{@a3.content}" 
+    row3 = row_starter("B") + "#{@b1.content}|#{@b2.content}|#{@b3.content}"
+    row4 = row_starter("C") + "#{@c1.content}|#{@c2.content}|#{@c3.content}"
+
+    puts "#{row1}\n#{row2}\n#{row3}\n#{row4}"
   end
+
 
   def got_win_case?
     @win_cases.any? do |win_case_array|
@@ -44,5 +46,11 @@ class Board
 
   def is_full?
     boardcases.all? { |boardcase| boardcase.content != ' ' }
+  end
+
+  private
+
+  def row_starter(first_char)
+    first_char.ljust(3, " ")
   end
 end
